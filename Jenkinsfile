@@ -1,10 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('Build'){
+    stage('Build') {
       step{
-        sh './Jenkins/demo.sh'
+        // sh './Jenkins/demo.sh'
+        sh 'echo "Hello World"'
       }
-    } 
-  }
+    }
+    stage('Deploy') {
+      step{
+        sh 'echo "Deploying"'
+      }
+    }
 }
