@@ -27,9 +27,11 @@ pipeline {
     stage('Tagging') {
       steps {
         sh '''
-          git tag -a v.0.09.0 -m "v0.09.0 release of Tanzu framework" 28b3ff46c1f62bd56cc9bb20a5ca415c7594d384
+          tagName="v0.09.0"
+          commitSha="8425089858c9ea91851989bb88272d8f67edaff3"
+          git tag -a $tagName -m "$tagName release of Tanzu framework" commitSha
           echo "tag pushing"
-          git push origin v0.09.0
+          git push origin $tagName
           echo "tags pushed"   
         '''
       }
