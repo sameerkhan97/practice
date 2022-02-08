@@ -2,13 +2,13 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      step{
+      steps {
         // sh './Jenkins/demo.sh'
         sh 'echo "Hello World"'
       }
     }
     stage('Deploy') {
-      step{
+      steps {
         sh 'echo "Deploying"'
       }
     }
