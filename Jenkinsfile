@@ -28,7 +28,7 @@ pipeline {
       steps {
         sh '''
           tagName="v0.09.0"
-          commitSha="8425089858c9ea91851989bb88272d8f67edaff3"
+          commitSha="e1cd6dac7adb1a032bb326c884eb5766a1cf8b32"
           git tag -a $tagName -m "$tagName release of Tanzu framework" commitSha
           echo "tag pushing"
           git push origin $tagName
