@@ -40,9 +40,9 @@ pipeline {
     stage('Release Branch') {
       steps {
         sh '''
-          git checkout -b release-0.09
+          //git checkout -b release-0.09
           echo "created and switched branch"
-          git push origin release-0.09
+          // git push origin release-0.09
           echo "pushed release branch to origin"
         '''
       }
