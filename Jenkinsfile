@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh './Jenkins/demo.sh'
+        sh './Jenkins'
+        sh 'chmod +x demo.sh'
+        sh './demo.sh'
         // sh 'echo "Hello World"'
       }
     }
