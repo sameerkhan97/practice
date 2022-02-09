@@ -17,7 +17,7 @@ pipeline {
           sh '''
             tmp_dir=$(mktemp -d)
             echo "Directory created"
-            git clone git@github.com:sameerkhan97/online_exams.git $tmp_dir
+            git clone git@github.com:sameerkhan97/sorting-searching-algorithms.git $tmp_dir
             echo "online exam repository cloned"
             cd $tmp_dir
           '''
