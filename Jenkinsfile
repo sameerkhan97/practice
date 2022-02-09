@@ -16,9 +16,9 @@ pipeline {
       steps {
           sh '''
             tmp_dir=$(mktemp -d)
-            echo "Directpry created"
-            git clone git@github.com:sameerkhan97/sorting-searching-algorithms.git $tmp_dir
-            echo "Repository cloned"
+            echo "Directory created"
+            git clone git@github.com:sameerkhan97/online_exams.git $tmp_dir
+            echo "online exam repository cloned"
             cd $tmp_dir
           '''
       }
@@ -28,7 +28,7 @@ pipeline {
       steps {
         sh '''
           tagName="v0.09.0"
-          commitSha="e1cd6dac7adb1a032bb326c884eb5766a1cf8b32"
+          commitSha="dc703894fd3298d32aa7cdaa5a1380f1c78916b1"
           git tag -a $tagName -m "$tagName release of Tanzu framework" $commitSha
           echo "tag pushing"
           git push origin $tagName
